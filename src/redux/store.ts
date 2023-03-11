@@ -3,7 +3,7 @@ import userReducer from "./userSlice";
 
 export const store = configureStore({
   reducer: {
-   user : userReducer
+   user : userReducer // user store 추가하기
   },
 });
 
