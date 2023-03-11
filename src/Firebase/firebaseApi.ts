@@ -8,6 +8,8 @@ import {
   NextOrObserver,
   onAuthStateChanged,
   signInWithRedirect,
+  signInWithCredential,
+  signInWithPopup,
   signOut,
   Unsubscribe,
   User,
@@ -29,9 +31,10 @@ export default class FirebaseApi {
     return onAuthStateChanged(this.auth, nextOrObserver);
   }
 
-  signInWithGoogleRedirect  = () => {
-    return signInWithRedirect(this.auth, this.googleAuthProvider);
-  }
+  // 이슈 발생 코드
+  signInWithGoogleRedirect = () => {
+    return signInWithPopup(this.auth, this.googleAuthProvider);
+  };
 
   signOut = () => {
     return signOut(this.auth);
