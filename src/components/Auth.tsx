@@ -14,7 +14,7 @@ const Auth = ({ firebaseApi }: WithFirebaseApiProps) => {
 
   const AuthButton = currentUserId == null ? loginWithGoogleBtn : logoutBtn;
 
-  return <div>{AuthButton};</div>;
+  return <div>{AuthButton}</div>;
 };
 
 export default withFirebaseApi(Auth);
